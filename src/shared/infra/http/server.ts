@@ -29,6 +29,6 @@ app.use((err: Error, reques: Request, response: Response, next: NextFunction) =>
   return response.status(500).json({ status: 'Error', message: 'Internal Server Error' });
 });
 
-app.listen(3333, () => {
-  console.log('... Iniciando o servidor na porta 3333');
+app.listen(process.env.PORT || 3333, () => {
+  console.log(`... Iniciando o servidor na porta ${process.env.PORT || 3333}`);
 });
