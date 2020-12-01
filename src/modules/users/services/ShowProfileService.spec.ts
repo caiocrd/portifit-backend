@@ -1,4 +1,3 @@
-import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import AppError from '@shared/errors/AppError';
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
@@ -9,15 +8,14 @@ let userRep: FakeUsersRepository;
 let fakehash: FakeHashProvider;
 let showProfileService: ShowProfileService;
 let createUserService: CreateUserService;
-let fakeCache: FakeCacheProvider;
 
 describe('ShowProfile', () => {
   beforeEach(() => {
     userRep = new FakeUsersRepository();
     fakehash = new FakeHashProvider();
     showProfileService = new ShowProfileService(userRep);
-    fakeCache = new FakeCacheProvider();
-    createUserService = new CreateUserService(userRep, fakehash, fakeCache);
+
+    createUserService = new CreateUserService(userRep, fakehash);
   });
 
   it('Should show existing profile', async () => {

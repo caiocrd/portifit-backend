@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import AppError from '@shared/errors/AppError';
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
@@ -11,15 +10,13 @@ let userRep: FakeUsersRepository;
 let fakeHash: FakeHashProvider;
 let updateProfileService: UpdateProfileService;
 let createUserService: CreateUserService;
-let fakeCache: FakeCacheProvider;
 
 describe('UpdateProfile', () => {
   beforeEach(() => {
     userRep = new FakeUsersRepository();
     fakeHash = new FakeHashProvider();
-    fakeCache = new FakeCacheProvider();
     updateProfileService = new UpdateProfileService(userRep, fakeHash);
-    createUserService = new CreateUserService(userRep, fakeHash, fakeCache);
+    createUserService = new CreateUserService(userRep, fakeHash);
   });
 
   it('Should update existing profile', async () => {

@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import AppError from '@shared/errors/AppError';
-import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import CreateUserService from './CreateUserService';
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
@@ -12,13 +11,11 @@ describe('AuthUser', () => {
   let fakeHash: FakeHashProvider;
   let createUserService: CreateUserService;
   let authService: AuthService;
-  let fakeCache: FakeCacheProvider;
 
   beforeEach(() => {
     fakeRep = new FakeUsersRepository();
     fakeHash = new FakeHashProvider();
-    fakeCache = new FakeCacheProvider();
-    createUserService = new CreateUserService(fakeRep, fakeHash, fakeCache);
+    createUserService = new CreateUserService(fakeRep, fakeHash);
     authService = new AuthService(fakeRep, fakeHash);
   });
   it('should be able to authenticate a user', async () => {
