@@ -1,7 +1,7 @@
-import uploadConfig from '@config/upload.config';
-import AppError from '@shared/errors/AppError';
 import fs from 'fs';
 import path from 'path';
+import AppError from '../../../../errors/AppError';
+import uploadConfig from '../../../../../configurations/upload.config';
 import IStorageProvider from '../models/IStorageProvider';
 
 export default class DiskStorageProvider implements IStorageProvider {

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import IEmailProvider from '@shared/container/providers/EmailProvider/models/IEmailProvider';
 import { inject, injectable } from 'tsyringe';
 import path from 'path';
+import IEmailProvider from '../../../shared/container/providers/EmailProvider/models/IEmailProvider';
 import AppError from '../../../shared/errors/AppError';
 
 import IUserRepository from '../repositories/IUserRepositorie';

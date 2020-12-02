@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
-import IUserRepository from '@modules/users/repositories/IUserRepositorie';
 import { container } from 'tsyringe';
-import '@modules/users/providers/HashProvider';
-import IUserTokenRepository from '@modules/users/repositories/IUserTokenRepositorie';
-import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
+import mailConfig from '../../configurations/mail.config';
+import UsersRepository from '../../modules/users/infra/typeorm/repositories/UsersRepository';
+import IUserRepository from '../../modules/users/repositories/IUserRepositorie';
+import '../../modules/users/providers/HashProvider';
+import IUserTokenRepository from '../../modules/users/repositories/IUserTokenRepositorie';
+import UserTokensRepository from '../../modules/users/infra/typeorm/repositories/UserTokensRepository';
 
-import mailConfig from '@config/mail.config';
 import IEmailProvider from './providers/EmailProvider/models/IEmailProvider';
 
 import IMailTempleteProvider from './providers/MailTemplateProvider/models/IMailTemplatelProvider';

@@ -2,7 +2,7 @@
 /* eslint-disable camelcase */
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { Exclude, Expose } from 'class-transformer';
-import uploadConfig from '@config/upload.config';
+import uploadConfig from '../../../../../configurations/upload.config';
 
 @Entity('users')
 class User {

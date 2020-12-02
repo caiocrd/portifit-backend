@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-import AppError from '@shared/errors/AppError';
 import { addHours, isAfter } from 'date-fns';
 import { inject, injectable } from 'tsyringe';
-import User from '../infra/typeorm/entities/User';
+import AppError from '../../../shared/errors/AppError';
 import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 
 import IUserRepository from '../repositories/IUserRepositorie';

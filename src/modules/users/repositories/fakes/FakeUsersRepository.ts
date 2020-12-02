@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
-import User from '@modules/users/infra/typeorm/entities/User';
 import { uuid } from 'uuidv4';
+import User from '../../infra/typeorm/entities/User';
+import ICreateUserDTO from '../../dtos/ICreateUserDTO';
 import IUserRepository from '../IUserRepositorie';
 
 class FakeUsersRepository implements IUserRepository {

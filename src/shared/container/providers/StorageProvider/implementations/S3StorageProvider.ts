@@ -1,9 +1,9 @@
-import uploadConfig from '@config/upload.config';
-import AppError from '@shared/errors/AppError';
 import fs from 'fs';
 import aws, { S3 } from 'aws-sdk';
 import path from 'path';
 import mime from 'mime';
+import AppError from '../../../../errors/AppError';
+import uploadConfig from '../../../../../configurations/upload.config';
 import IStorageProvider from '../models/IStorageProvider';
 
 export default class S3StorageProvider implements IStorageProvider {

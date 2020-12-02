@@ -8,17 +8,6 @@
     "moduleResolution": "node",
     "baseUrl": "./src",
     "allowJs": true,
-    "paths": {
-      "@modules/*": [
-        "modules/*"
-      ],
-      "@config/*": [
-        "configurations/*"
-      ],
-      "@shared/*": [
-        "shared/*"
-      ]
-    },
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

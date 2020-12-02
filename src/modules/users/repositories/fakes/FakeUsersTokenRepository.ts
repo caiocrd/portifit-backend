@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
 import { uuid } from 'uuidv4';
+import UserToken from '../../infra/typeorm/entities/UserToken';
 
 import IUserTokenRepository from '../IUserTokenRepositorie';
 
